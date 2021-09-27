@@ -1,15 +1,28 @@
-class Tooltip extends HTMLElement { // every component has to extend to it
+class Tooltip extends HTMLElement {
     constructor() {
-        super(); // have to call it first and it is required
-        console.log('custom component is working!!');
+        super();
+    }
+
+    connectedCallback() {
+        const tooltipicon = document.createElement('span');
+        tooltipicon.textContent = ' (?)';
+        this.appendChild(tooltipicon);
     }
 }
 
 customElements.define('demo-tooltip', Tooltip); // to define the custom element
+
 /**
- * rules: 
- *   1. custom component name has to have two name separated by dash so that we can distinguish 
- *      it with build in elements, underscore is not allowed
- *   2. it has to have the unique tag
- *   3. idea: use prefix that might go with your organization name 
+ * webComponent lifeCycle::
+ *      1. constructor() called when the element is created - it is good for basic initializing
+ *             - it is wrong place to access the element as at this point the element is not added 
+ *               to the DOM
+ *      2. connectedCallback(): this is called when the custom element is attached to the DOM
+ *          therefore this is the place for DOMInitializations so that we can now start accessing 
+ *          the DOM
+ *      3. disconnectedCallback(): will be called whenever we will detach the customElement 
+ *          from the DOM
+ *      4. attributeChangedCallback(): this will be good to listen to the changes to the attribute to
+ *          our own element
+ *          can be used to updating the data 
  */
