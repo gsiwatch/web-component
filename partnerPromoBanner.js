@@ -1,12 +1,12 @@
 class PartnerPromoBanner extends HTMLElement {
-    constructor() { // this will run during initializing the class 
+    constructor() {
         super();
     }
 
-    connectedCallback() { // this hook will run custom element will be connected to DOM
+    connectedCallback() {
         const pContainer = document.createElement("p");
-        pContainer.textContent = 'Hello WebComponent';
-        // right now this is a part of DOM
+        // to get attribute value
+        pContainer.textContent = this.getAttribute('name') || 'Hello WebComponent';
         this.appendChild(pContainer);
     }
 }
