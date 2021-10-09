@@ -2,13 +2,16 @@ class PartnerPromoBanner extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-    }
-
-    connectedCallback() {
-        const pContainer = document.createElement("p");
-        pContainer.textContent = this.getAttribute('name') || 'Hello WebComponent';
-        pContainer.style.backgroundColor = 'yellow';
-        this.shadowRoot.appendChild(pContainer);
+        // we can make use of <slot> too if we want to pass verbiage
+        this.shadowRoot.innerHTML = `
+            <style>
+                p {
+                    background-color: orange;
+                    color: yellow;
+                }
+            </style>
+            <p> hello world!! </p>
+        `
     }
 }
 
