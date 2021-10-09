@@ -7,6 +7,7 @@ class PartnerPromoBanner extends HTMLElement {
         const pContainer = document.createElement("p");
         // to get attribute value
         pContainer.textContent = this.getAttribute('name') || 'Hello WebComponent';
+        pContainer.style.backgroundColor = 'yellow';
         this.appendChild(pContainer);
     }
 }
