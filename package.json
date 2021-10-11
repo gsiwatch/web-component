@@ -1,7 +1,7 @@
 {
   "name": "rocket-web-component",
-  "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "version": "1.0.0",
+  "description": "Web Components",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -15,11 +15,11 @@
     "loader/"
   ],
   "scripts": {
-    "build": "stencil build --docs",
-    "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "build": "npx stencil build --docs",
+    "start": "npx stencil build --dev --watch --serve",
+    "test": "npx stencil test --spec --e2e",
+    "test.watch": "npx stencil test --spec --e2e --watchAll",
+    "generate": "npx stencil generate"
   },
   "dependencies": {
     "@stencil/core": "^2.7.0"
@@ -28,6 +28,10 @@
     "@types/jest": "^26.0.24",
     "jest": "^26.6.3",
     "jest-cli": "^26.6.3",
-    "puppeteer": "^10.0.0"
+    "puppeteer": "^10.0.0",
+    "yarn": "1.9.4"
+  },
+  "engines": {
+    "node": ">=12.10.0"
   }
 }

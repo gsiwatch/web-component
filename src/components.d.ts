@@ -6,56 +6,40 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface GsDemo {
         /**
-          * The first name
+          * Name property to provide name as title
          */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "name": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLGsDemoElement extends Components.GsDemo, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLGsDemoElement: {
+        prototype: HTMLGsDemoElement;
+        new (): HTMLGsDemoElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "gs-demo": HTMLGsDemoElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface GsDemo {
         /**
-          * The first name
+          * Name property to provide name as title
          */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "name"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "gs-demo": GsDemo;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "gs-demo": LocalJSX.GsDemo & JSXBase.HTMLAttributes<HTMLGsDemoElement>;
         }
     }
 }
