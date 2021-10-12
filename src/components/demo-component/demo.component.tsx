@@ -1,7 +1,14 @@
 import { Component, Prop, h } from "@stencil/core";
 
 @Component({
-  tag: 'gs-demo'
+  tag: 'gs-demo',
+  styles: `
+    .demo {
+      font-size: 64px;
+      background-color: orange;
+    }
+  `,
+  shadow: true,
 })
 export class DemoComponent {
 
@@ -12,7 +19,9 @@ export class DemoComponent {
 
   render() {
     return(
-      <h1>{this.name}</h1>
+      <div class="demo">
+        <p>{this.name}</p>
+      </div>
     );
   }
 }
