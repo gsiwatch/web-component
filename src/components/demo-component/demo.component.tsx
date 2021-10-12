@@ -2,13 +2,7 @@ import { Component, Prop, h } from "@stencil/core";
 
 @Component({
   tag: 'gs-demo',
-  styles: `
-    .demo {
-      font-size: 64px;
-      background-color: orange;
-    }
-  `,
-  shadow: true,
+  styleUrl: './demo.component.scss',
 })
 export class DemoComponent {
 
