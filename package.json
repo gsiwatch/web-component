@@ -1,6 +1,6 @@
 {
   "name": "rocket-web-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Web Components",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
@@ -16,19 +16,30 @@
   ],
   "scripts": {
     "build": "npx stencil build --docs",
-    "start": "npx stencil build --dev --watch --serve",
-    "test": "npx stencil test --spec --e2e",
-    "test.watch": "npx stencil test --spec --e2e --watchAll",
     "generate": "npx stencil generate",
-    "pack": "yarn run build && npm pack"
+    "pack": "yarn run build && npm pack",
+    "start": "npx stencil build --dev --watch --serve",
+    "storybook": "start-storybook -p 6006",
+    "test": "npx stencil test --spec --e2e",
+    "test:watch": "npx stencil test --spec --e2e --watchAll",
+    "build-storybook": "build-storybook",
+    "build-stencil:watch": "stencil build --docs-readme --watch --serve",
+    "start-storybook": "start-storybook -p 6006 -s dist"
   },
   "dependencies": {
     "@sparkdesignsystem/spark": "^18.0.2",
     "@stencil/core": "^2.7.0",
-    "@stencil/sass": "1.4.1"
+    "@stencil/sass": "1.4.1",
+    "@storybook/react": "^6.3.11"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@storybook/addon-actions": "^6.3.11",
+    "@storybook/addon-essentials": "^6.3.11",
+    "@storybook/addon-links": "^6.3.11",
+    "@storybook/html": "^6.3.11",
     "@types/jest": "^26.0.24",
+    "babel-loader": "^8.2.2",
     "jest": "^26.6.3",
     "jest-cli": "^26.6.3",
     "puppeteer": "^10.0.0",

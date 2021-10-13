@@ -5,12 +5,25 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { CompOption } from "./components/demo-component/demo.component";
 export namespace Components {
     interface GsDemo {
         /**
-          * Name property to provide name as title
+          * If true, the button is displayed as disabled
+         */
+        "disabled": boolean;
+        /**
+          * This text which is shown as label
+         */
+        "label": string;
+        /**
+          * Is needed to reference the form data after the form is submitted
          */
         "name": string;
+        /**
+          * Define the available options in the drop-down list
+         */
+        "options": CompOption[];
     }
 }
 declare global {
@@ -27,9 +40,21 @@ declare global {
 declare namespace LocalJSX {
     interface GsDemo {
         /**
-          * Name property to provide name as title
+          * If true, the button is displayed as disabled
+         */
+        "disabled"?: boolean;
+        /**
+          * This text which is shown as label
+         */
+        "label"?: string;
+        /**
+          * Is needed to reference the form data after the form is submitted
          */
         "name"?: string;
+        /**
+          * Define the available options in the drop-down list
+         */
+        "options"?: CompOption[];
     }
     interface IntrinsicElements {
         "gs-demo": GsDemo;

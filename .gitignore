@@ -20,6 +20,9 @@ log.txt
 node_modules/
 $RECYCLE.BIN/
 
+storage/
+.npmrc
+
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate

@@ -73,3 +73,15 @@ The first step for all three of these strategies is to [publish to NPM](https://
 - Run `npm install my-component --save`
 - Add an import to the npm packages `import my-component;`
 - Then you can use the element anywhere in your template, JSX, html etc
+
+### Local NPM Registry
+##### Steps
+1. Run 'npm install -g verdaccio'
+2. Run 'verdaccio'
+3. Update .npmrc with 'registry=http://localhost:4873'
+4. creeate a user to our registry 'npm adduser --registry http://localhost:4873'
+5. npm pack
+6. npm publish
+
+### Storybook
+[Storybook Docs](https://storybook.js.org/docs/html/get-started/introduction)

@@ -9,6 +9,22 @@
     <script nomodule src="/build/rocket-web-component.js"></script>
   </head>
   <body>
-    <gs-demo name="gaurish"></gs-demo>
+    <gs-demo id="gs-comp" label="demo" name="gsComp" disabled="false"></gs-demo>
   </body>
+  <script>
+    document.getElementById('gs-comp').options = [
+      {
+        value: 'Item 1',
+        displayText: 'Item 1',
+      },
+      {
+        value: 'Item 2',
+        displayText: 'Item 2',
+      },
+      {
+        value: 'Item 3',
+        displayText: 'Item 3',
+      },
+    ];
+  </script>
 </html>
