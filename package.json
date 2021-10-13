@@ -1,6 +1,6 @@
 {
   "name": "rocket-web-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Web Components",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
@@ -19,7 +19,8 @@
     "start": "npx stencil build --dev --watch --serve",
     "test": "npx stencil test --spec --e2e",
     "test.watch": "npx stencil test --spec --e2e --watchAll",
-    "generate": "npx stencil generate"
+    "generate": "npx stencil generate",
+    "pack": "yarn run build && npm pack"
   },
   "dependencies": {
     "@sparkdesignsystem/spark": "^18.0.2",
