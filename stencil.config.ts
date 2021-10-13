@@ -4,7 +4,11 @@ import { sass } from '@stencil/sass';
 export const config: Config = {
   namespace: 'rocket-web-component',
   plugins: [
-    sass()
+    sass({
+      injectGlobalPaths: [
+        'src/globals/global.scss'
+      ]
+    })
   ],
   outputTargets: [
     {

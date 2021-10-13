@@ -22,8 +22,9 @@
     "generate": "npx stencil generate"
   },
   "dependencies": {
+    "@sparkdesignsystem/spark": "^18.0.2",
     "@stencil/core": "^2.7.0",
-    "@stencil/sass": "^1.5.2"
+    "@stencil/sass": "1.4.1"
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",

@@ -15,6 +15,9 @@ export class DemoComponent {
     return(
       <div class="demo">
         <p>{this.name}</p>
+        <a class="sprk-b-Link" href="#nogo">
+          From Spark Class
+        </a>
       </div>
     );
   }
