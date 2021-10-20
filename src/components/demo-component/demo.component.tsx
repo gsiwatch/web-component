@@ -34,8 +34,10 @@ export class DemoComponent {
   render() {
     return (
       <div>
+        <div>
+          <rma-svg></rma-svg>
+        </div>
         <label htmlFor={this.name}>{this.label}</label>
-
         <select name={this.name} id={this.name} disabled={this.disabled}>
           {this.options.map(o => (
             <option value={o.value}>{o.displayText}</option>

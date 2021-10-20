@@ -25,6 +25,8 @@ export namespace Components {
          */
         "options": CompOption[];
     }
+    interface RmaSvg {
+    }
 }
 declare global {
     interface HTMLGsDemoElement extends Components.GsDemo, HTMLStencilElement {
@@ -33,8 +35,15 @@ declare global {
         prototype: HTMLGsDemoElement;
         new (): HTMLGsDemoElement;
     };
+    interface HTMLRmaSvgElement extends Components.RmaSvg, HTMLStencilElement {
+    }
+    var HTMLRmaSvgElement: {
+        prototype: HTMLRmaSvgElement;
+        new (): HTMLRmaSvgElement;
+    };
     interface HTMLElementTagNameMap {
         "gs-demo": HTMLGsDemoElement;
+        "rma-svg": HTMLRmaSvgElement;
     }
 }
 declare namespace LocalJSX {
@@ -56,8 +65,11 @@ declare namespace LocalJSX {
          */
         "options"?: CompOption[];
     }
+    interface RmaSvg {
+    }
     interface IntrinsicElements {
         "gs-demo": GsDemo;
+        "rma-svg": RmaSvg;
     }
 }
 export { LocalJSX as JSX };
@@ -65,6 +77,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "gs-demo": LocalJSX.GsDemo & JSXBase.HTMLAttributes<HTMLGsDemoElement>;
+            "rma-svg": LocalJSX.RmaSvg & JSXBase.HTMLAttributes<HTMLRmaSvgElement>;
         }
     }
 }
