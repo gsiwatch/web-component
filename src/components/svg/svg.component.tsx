@@ -1,7 +1,7 @@
 import { Component, h } from "@stencil/core";
 
 @Component({
-  tag: 'rma-svg',
+  tag: 'rma-circle-svg',
 })
 export class SvgComponent {
   render() {

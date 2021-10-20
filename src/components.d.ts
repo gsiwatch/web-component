@@ -25,7 +25,7 @@ export namespace Components {
          */
         "options": CompOption[];
     }
-    interface RmaSvg {
+    interface RmaCircleSvg {
     }
 }
 declare global {
@@ -35,15 +35,15 @@ declare global {
         prototype: HTMLGsDemoElement;
         new (): HTMLGsDemoElement;
     };
-    interface HTMLRmaSvgElement extends Components.RmaSvg, HTMLStencilElement {
+    interface HTMLRmaCircleSvgElement extends Components.RmaCircleSvg, HTMLStencilElement {
     }
-    var HTMLRmaSvgElement: {
-        prototype: HTMLRmaSvgElement;
-        new (): HTMLRmaSvgElement;
+    var HTMLRmaCircleSvgElement: {
+        prototype: HTMLRmaCircleSvgElement;
+        new (): HTMLRmaCircleSvgElement;
     };
     interface HTMLElementTagNameMap {
         "gs-demo": HTMLGsDemoElement;
-        "rma-svg": HTMLRmaSvgElement;
+        "rma-circle-svg": HTMLRmaCircleSvgElement;
     }
 }
 declare namespace LocalJSX {
@@ -65,11 +65,11 @@ declare namespace LocalJSX {
          */
         "options"?: CompOption[];
     }
-    interface RmaSvg {
+    interface RmaCircleSvg {
     }
     interface IntrinsicElements {
         "gs-demo": GsDemo;
-        "rma-svg": RmaSvg;
+        "rma-circle-svg": RmaCircleSvg;
     }
 }
 export { LocalJSX as JSX };
@@ -77,7 +77,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "gs-demo": LocalJSX.GsDemo & JSXBase.HTMLAttributes<HTMLGsDemoElement>;
-            "rma-svg": LocalJSX.RmaSvg & JSXBase.HTMLAttributes<HTMLRmaSvgElement>;
+            "rma-circle-svg": LocalJSX.RmaCircleSvg & JSXBase.HTMLAttributes<HTMLRmaCircleSvgElement>;
         }
     }
 }

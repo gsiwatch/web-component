@@ -14,8 +14,8 @@
 ### Graph
 ```mermaid
 graph TD;
-  gs-demo --> rma-svg
-  style rma-svg fill:#f9f,stroke:#333,stroke-width:4px
+  gs-demo --> rma-circle-svg
+  style rma-circle-svg fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

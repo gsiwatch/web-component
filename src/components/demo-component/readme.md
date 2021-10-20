@@ -19,12 +19,12 @@
 
 ### Depends on
 
-- [rma-svg](../svg)
+- [rma-circle-svg](../svg)
 
 ### Graph
 ```mermaid
 graph TD;
-  gs-demo --> rma-svg
+  gs-demo --> rma-circle-svg
   style gs-demo fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
